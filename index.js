@@ -7,6 +7,8 @@ var bodyParser = require('body-parser')
 //look in the public folder. If it's there, give it to them.
 app.use(express.static(__dirname + '/public'));
 
+//awesome change
+
 //this lets us read POST data
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
