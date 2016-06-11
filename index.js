@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 //make an empty list of ideas
 var posts = [];
-var idea.text = {};
+var idea = {};
 idea.text = "Two cats who solve crimes in Dunedin";
 posts.push(idea);
 
