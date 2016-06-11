@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <meta charset='utf-8'>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -10,9 +11,16 @@
       <li><a href="feed.html">Feed</a></li>
       <li><a href="post.html">Post</a></li>
     </nav>
-      <form method="post" action="/ideas">
+      <form class="enteredidea" method="post" action="/ideas">
           <input type="text" name="idea" value="idea goes here">
           <input type="submit" value="Submit">
       </form>
+      <script>
+      var chur = function () {
+        alert("chur cuzzie");
+      }
+
+      $(".enteredidea").on("click", chur);
+      </script>
   </body>
 </html>
