@@ -5,6 +5,46 @@ body {
   background-color: #FFF0A5;
   padding: 20px;
 }
+
+nav {
+  overflow:hidden;
+padding:3px;
+padding-top:4px;
+margin-left:-1px;
+margin-top:2px;
+display: inline-block;
+font-family:'Viga', arial, sans-serif;
+font-size:14px;
+text-align: center;
+text-transform:uppercase;
+text-decoration:none;
+color: #000;
+background-color:#EEEBEB;
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+}
+
+li a {
+  border-radius: 0px 0px 0px 0px;
+  background-color: #EEEBEB;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 6px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #CECECE;
+}
+
 h1 {
   text-align: center;
   color: #FFB03B;
