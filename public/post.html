@@ -11,16 +11,21 @@
       <li><a href="feed.html">Feed</a></li>
       <li><a href="post.html">Post</a></li>
     </nav>
-      <form class="enteredidea" method="post" action="/ideas">
-          <input type="text" name="idea" value="idea goes here">
+      <form class="post" method="post" action="/ideas">
+          <input class="ideaInput" type="text" name="idea" value="idea goes here">
           <input type="submit" value="Submit">
       </form>
+      <div class="thanks"></div>
       <script>
-      var chur = function () {
-        alert("chur cuzzie");
+      var chur = function (e) {
+        var data = {};
+        data.idea = $(".ideaInput").val();
+        $.post("/ideas", data);
+        $(".thanks").text("chur cuzzie! your idea is bomb af! ily");
+        e.preventDefault();
       }
 
-      $(".enteredidea").on("click", chur);
+      $(".post").on("submit", chur);
       </script>
   </body>
 </html>
