@@ -58,3 +58,10 @@ h2 {
   border-radius: 5px;
   text-align: center;
 }
+
+.thanks {
+  font-family:'Viga', arial, sans-serif;
+  font-size:14px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
