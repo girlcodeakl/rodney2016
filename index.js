@@ -15,6 +15,7 @@ app.use(bodyParser.json())
 var posts = [];
 var idea = {};
 idea.text = "Two cats who solve crimes in Dunedin";
+idea.time = new Date();
 posts.push(idea);
 
 //let a client GET the list of ideas
@@ -30,6 +31,7 @@ var saveNewIdea = function (request, response) {
 //add this:
 var idea = {};
 idea.text = request.body.idea;
+idea.time = new Date();
 posts.push(idea); //save it in our list
   response.send("thanks for your idea. Press back to add another");
 }
