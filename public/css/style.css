@@ -12,10 +12,10 @@ padding:3px;
 padding-top:4px;
 margin-left:-1px;
 margin-top:2px;
-display: inline-block;
+display: inline;
 font-family:'Viga', arial, sans-serif;
 font-size:14px;
-text-align: center;
+text-align: center-block;
 text-transform:uppercase;
 text-decoration:none;
 color: #000;
@@ -28,7 +28,7 @@ list-style-type: none;
 
 li {
   display: inline-block;
-  text-align: center;
+  text-align: block;
 }
 
 li a {
@@ -57,4 +57,7 @@ h2 {
   border: 2px solid #FFB03B;
   border-radius: 5px;
   text-align: center;
+}
+img {display: block
+  center;
 }
