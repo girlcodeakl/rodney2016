@@ -54,15 +54,20 @@ h1 {
 }
 
 h2 {
-  color: #468966;
+  color: black;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
   margin: 10px;
   padding: 10px;
   border-bottom: 1px solid #7ECEFD;
   text-align: center;
 }
 
-img {display: block
+img {
+  display: block
   center;
+  padding: 10px;
 }
 
 .thanks {
@@ -95,4 +100,14 @@ input[type=submit] {
 
 .centreme {
   padding-left: 60px;
+}
+
+.likeButton {
+  border-radius: 0px 0px 0px 0px;
+  background-color: #FF7F66;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 6px 16px;
+  text-decoration: none;
 }
