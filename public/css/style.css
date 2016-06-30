@@ -1,8 +1,10 @@
 body {
   color: black;
+  background-color: #FFF6E5;
 }
+
 .idea-box {
-  background-color: #FFF0A5;
+  background-color: #FFF6E5;
   padding: 20px;
 }
 
@@ -13,13 +15,13 @@ padding-top:4px;
 margin-left:-1px;
 margin-top:2px;
 display: inline;
-font-family:'Viga', arial, sans-serif;
+font-family:"Courier New", Courier, monospace;
 font-size:14px;
 text-align: center-block;
 text-transform:uppercase;
 text-decoration:none;
-color: #000;
-background-color:#EEEBEB;
+color: white;
+background-color: #FFF6E5;
 -webkit-transition: all 0.5s ease-out;
 -moz-transition: all 0.5s ease-out;
 transition: all 0.5s ease-out;
@@ -33,34 +35,36 @@ li {
 
 li a {
   border-radius: 0px 0px 0px 0px;
-  background-color: #EEEBEB;
+  background-color: #FF7F66;
   display: inline-block;
-  color: black;
+  color: white;
   text-align: center;
   padding: 6px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: #CECECE;
+  background-color: #FFA994;
 }
 
 h1 {
   text-align: center;
-  color: #FFB03B;
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #FF7F66;
 }
 
 h2 {
   color: #468966;
   margin: 10px;
   padding: 10px;
-  border: 2px solid #FFB03B;
-  border-radius: 5px;
+  border-bottom: 1px solid #7ECEFD;
   text-align: center;
 }
+
 img {display: block
   center;
 }
+
 .thanks {
   font-family:'Viga', arial, sans-serif;
   font-size:14px;
@@ -77,4 +81,18 @@ input[type=submit] {
    color: #FFFFFF;
    border: 10px solid #E8CFA4;
    background-color: #E8CFA4;
+}
+
+.space {
+  padding-top: 10px;
+}
+
+.innerspace {
+  display: block;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.centreme {
+  padding-left: 60px;
 }
