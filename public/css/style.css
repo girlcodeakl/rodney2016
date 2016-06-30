@@ -61,3 +61,9 @@ h2 {
 img {display: block
   center;
 }
+.thanks {
+  font-family:'Viga', arial, sans-serif;
+  font-size:14px;
+  padding-top: 10px;
+  text-transform: uppercase;
+}

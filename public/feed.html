@@ -19,7 +19,9 @@
 //Hello! This is the start of the JavaScript.
 
 var displayIdea = function(idea) {
-  var ideaElement = $('<h2>'+ "<div>" + idea.text + "</div>" + '<img src="https://i.ytimg.com/vi/0FEYvKxCnYw/maxresdefault.jpg" align="middle" alt="some_text" width="300">' + "<div>" + "time" + "</div>"+ '</h2>')
+  var ideaElement =
+  $('<h2>'+ "<div>" + idea.text + "</div>"
+  + '<img src=' + idea.image + ' align="middle" alt="some_text" width="300">' + "<div>" + "time" + "</div>"+ '</h2>')
   $(".idea-box").append(ideaElement);
 
 }
