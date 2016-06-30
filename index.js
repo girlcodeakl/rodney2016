@@ -17,6 +17,7 @@ var idea = {};
 idea.text = "Two cats who solve crimes in Dunedin";
 idea.time = new Date();
 idea.image = 'http://i.huffpost.com/gen/3152148/images/r-ANIMALS-FUNNY-medium.jpg'
+idea.id = 1001;
 posts.push(idea);
 
 //let a client GET the list of ideas
@@ -34,11 +35,32 @@ var idea = {};
 idea.text = request.body.idea;
 idea.image = request.body.image;
 idea.time = new Date();
+idea.id = Math.round(Math.random() * 10000);
 posts.push(idea); //save it in our list
   response.send("thanks for your idea. Press back to add another");
 }
 app.post('/ideas', saveNewIdea);
 
-//listen for connections on port 3000
+//listen for connections on port 3
 app.listen(process.env.PORT || 3000);
 console.log("I am listening...");
+
+
+
+
+
+
+
+
+
+
+app.get('/idea', function (req, res) {
+   var searchId = req.query.id;
+   console.log("Searching for post " + searchId);
+   var results = posts.filter(function (post) { return post.id == searchId; });
+  if (results.length > 0) {
+    res.send(results[0]);
+  } else {
+  res.send(null);
+  }
+});
