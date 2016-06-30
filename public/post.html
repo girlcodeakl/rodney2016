@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <meta charset='utf-8'>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="feed.html">Feed</a></li>
-      <li><a href="post.html">Post</a></li>
-    </nav>
-      <form class="post" method="post" action="/ideas">
-          <input class="ideaInput" type="text" name="idea" placeholder="idea goes here" style="height: 30px; max-width: 300px;" autofocus="autofocus">
-          <input type="submit" value="Submit">
-      </form>
-      <div class="thanks"></div>
-      <script>
-      function resizeInput() {
-    $(this).attr('size', $(this).val().length);
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset='utf-8'>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="feed.html">Feed</a></li>
+    <li><a href="post.html">Post</a></li>
+  </nav>
+  <form class="post" method="post" action="/ideas">
+    <input class="ideaInput" type="text" name="idea"  placeholder="idea goes here" style="height: 30px; max-width: 300px;">
+    <input class="imageInput" type="text" name="image" value="image goes here" style="height: 30px; max-width: 300px;">
+    <input type="submit" value="Submit">
+  </form>
+  <div class="thanks"></div>
+  <script>
+  function resizeInput() {
+$(this).attr('size', $(this).val().length);
 }
 
 $('.ideaInput')
-    // event handler
-    .keyup(resizeInput)
-    // resize on page load
-    .each(resizeInput);
+// event handler
+.keyup(resizeInput)
+// resize on page load
+.each(resizeInput);
 
-      var chur = function (e) {
-        var data = {};
-        data.idea = $(".ideaInput").val();
-        $.post("/ideas", data);
-        $(".thanks").text("chur cuzzie! your idea is bomb af! ily");
-        e.preventDefault();
-      }
+  var chur = function (e) {
+    var data = {};
+    data.idea = $(".ideaInput").val();
 
-      $(".post").on("submit", chur);
-      </script>
-  </body>
+    if ($(".imageInput").val()===''){
+      data.image= 'https://img.buzzfeed.com/buzzfeed-static/static/2016-03/21/10/enhanced/webdr06/enhanced-1670-1458569502-8.jpg?no-auto'
+    } else {
+      data.image = $(".imageInput").val();
+    }
+    $.post("/ideas", data);
+    $(".thanks").text("chur cuzzie! your idea is bomb af! ily");
+    e.preventDefault();
+  }
+
+  $(".post").on("submit", chur);
+  </script>
+</body>
 </html>
