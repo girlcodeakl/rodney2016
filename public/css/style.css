@@ -67,3 +67,14 @@ img {display: block
   padding-top: 10px;
   text-transform: uppercase;
 }
+
+input[type=text] {
+  color: #000000;
+  font-size: 14px;
+}
+
+input[type=submit] {
+   color: #FFFFFF;
+   border: 10px solid #E8CFA4;
+   background-color: #E8CFA4;
+}
