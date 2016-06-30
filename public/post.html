@@ -29,11 +29,9 @@ $('.imageInput').on("input", resizeInput);
   var chur = function (e) {
     var data = {};
     data.idea = $(".ideaInput").val();
- idea.time = "test";
     if ($(".imageInput").val()===''){
       data.image= 'https://img.buzzfeed.com/buzzfeed-static/static/2016-03/21/10/enhanced/webdr06/enhanced-1670-1458569502-8.jpg?no-auto'
     } else {
-
       data.image = $(".imageInput").val();
     }
     $.post("/ideas", data);
