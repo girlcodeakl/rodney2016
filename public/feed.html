@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
     <title>Feline Appreciation Society</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -22,7 +23,7 @@ var displayIdea = function(idea) {
   var ideaElement =
   $('<h2>'+ "<div>" + idea.text + "</div>"
   + '<img src=' + idea.image + ' align="middle" alt="some_text" width="300">' + "<div>" +
-   "time" + '<br>' + '<a href="#" class="likeButton">Like</a>' +"</div>"+ '</h2>')
+   "time" + '<br>' + '<a href="#" class="likeButton">Like</a>' +"</div>"+ $.format.prettyDate (idea.time) + '</h2>')
   $(".idea-box").append(ideaElement);
   ideaElement.delegate(".likeButton", "click", function() {
         alert("You liked: " + idea.text + "!");
