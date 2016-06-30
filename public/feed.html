@@ -3,19 +3,17 @@
   <head>
     <meta charset='utf-8'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-
     </script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
-
-    <title>Idea Feed</title>
+    <title>Feline Appreciation Society</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <nav>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="feed.html">Feed</a></li>
-      <li><a href="post.html">Post</a></li>
+      <li><a href="index.html">H o m e</a></li>
+      <li><a href="feed.html">F e e d</a></li>
+      <li><a href="post.html">P o s t</a></li>
     </nav>
-    <h1 class="title">Idea Feed</h1>
+    <h1 class="title"><i>FELINE APPRECIATION SOCIETY</i></h1>
     <div class="idea-box">
     </div>
     <script>
@@ -24,11 +22,12 @@
 var displayIdea = function(idea) {
   var ideaElement =
   $('<h2>'+ "<div>" + idea.text + "</div>"
-  + '<img src=' + idea.image + ' align="middle" alt="some_text" width="300">' + "<div>" + $.format.prettyDate (idea.time) + "</div>"+ '</h2>')
-  $(".idea-box").append(ideaElement)
-
-  ;
-
+  + '<img src=' + idea.image + ' align="middle" alt="some_text" width="300">' + "<div>" +
+   "time" + '<br>' + '<a href="#" class="likeButton">Like</a>' +"</div>"+ $.format.prettyDate (idea.time) + '</h2>')
+  $(".idea-box").append(ideaElement);
+  ideaElement.delegate(".likeButton", "click", function() {
+        alert("You liked: " + idea.text + "!");
+    });
 }
 
 var createFeed = function(data) {
